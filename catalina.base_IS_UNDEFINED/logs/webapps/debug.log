@@ -55,3 +55,6 @@
 2018-07-02 17:13:26.576 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
 2018-07-02 17:13:26.578 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺4(String), test4(String), test4(String), test4(String), upload\item\shop\7\2018070217132699231.jpg(String), 2018-07-02 17:13:26.029(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 7(Long)
 2018-07-02 17:13:26.583 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-02 21:06:38.737 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2018-07-02 21:06:38.776 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2018-07-02 21:06:38.814 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
