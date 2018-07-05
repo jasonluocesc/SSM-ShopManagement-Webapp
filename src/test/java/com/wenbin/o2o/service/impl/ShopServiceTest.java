@@ -1,14 +1,14 @@
 package com.wenbin.o2o.service.impl;
 
 import com.wenbin.o2o.BaseTest;
-import com.wenbin.o2o.dto.ShopExcution;
+import com.wenbin.o2o.dto.ShopExecution;
 import com.wenbin.o2o.entity.Area;
 import com.wenbin.o2o.entity.PersonInfo;
 import com.wenbin.o2o.entity.Shop;
 import com.wenbin.o2o.entity.ShopCategory;
 import com.wenbin.o2o.enums.ShopStateEnum;
+import com.wenbin.o2o.exceptions.ShopOperationException;
 import com.wenbin.o2o.service.ShopService;
-import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -29,7 +29,18 @@ public class ShopServiceTest extends BaseTest {
     private ShopService shopService;
 
     @Test
-    public void addShop() throws FileNotFoundException {
+    public void testGetShopList(){
+        Shop shopCondition = new Shop();
+        ShopCategory sc = new ShopCategory();
+        sc.setShopCategoryId(1L);
+        shopCondition.setShopCategory(sc);
+        ShopExecution se = shopService.getShopList(shopCondition,6,2);
+        System.out.println("店铺列表数目为："+se.getShopList().size());
+        System.out.println("店铺为"+se.getCount());
+    }
+
+    @Test
+    public void testAddShop() throws FileNotFoundException {
         Shop shop = new Shop();
         PersonInfo owner = new PersonInfo();
         Area area = new Area();
@@ -49,8 +60,18 @@ public class ShopServiceTest extends BaseTest {
         shop.setAdvice("审核中");
         File shopImg=new File("G:\\Wenbin.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExcution se = shopService.addShop(shop,is,shopImg.getName());
+        ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
         assertEquals(ShopStateEnum.CHECK.getState(),se.getState());
+    }
 
+    @Test
+    public void testModifyShop() throws ShopOperationException,FileNotFoundException {
+        Shop shop = new Shop();
+        shop.setShopId(2L);
+        shop.setShopName("CoCo after test");
+        File shopImg = new File("G:/Wenbin.jpg");
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution shopExecution = shopService.modifyShop(shop,is,shopImg.getName());
+        System.out.println("新图片地址为:"+shopExecution.getShop().getShopImg());
     }
 }

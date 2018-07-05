@@ -10,7 +10,7 @@ import java.util.List;
  * @author Wenbin Luo @ Aalto University
  */
 @Data
-public class ShopExcution {
+public class ShopExecution {
 
     private int state;
 
@@ -22,19 +22,19 @@ public class ShopExcution {
 
     private List<Shop> shopList;
 
-    public ShopExcution(){
+    public ShopExecution(){
 
     }
-    public ShopExcution(ShopStateEnum stateEnum){
+    public ShopExecution(ShopStateEnum stateEnum){
         this.state=stateEnum.getState();
         this.stateInfo=stateEnum.getStateInfo();
     }
-    public ShopExcution(ShopStateEnum stateEnum,Shop shop) {
+    public ShopExecution(ShopStateEnum stateEnum, Shop shop) {
         this.state=stateEnum.getState();
         this.stateInfo=stateEnum.getStateInfo();
         this.shop = shop;
     }
-    public ShopExcution(ShopStateEnum stateEnum,List<Shop> shopList) {
+    public ShopExecution(ShopStateEnum stateEnum, List<Shop> shopList) {
         this.state=stateEnum.getState();
         this.stateInfo=stateEnum.getStateInfo();
         this.shopList = shopList;

@@ -1,0 +1,150 @@
+2018-07-03 11:17:24.816 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=#(shopId) 
+2018-07-03 11:17:24.892 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 
+2018-07-03 11:21:05.203 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 11:21:05.238 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 8(Long)
+2018-07-03 11:21:05.270 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:00:51.101 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:00:51.147 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:00:51.184 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:00:51.223 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312005156849.jpg
+2018-07-03 12:00:51.223 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312005156849.jpg
+2018-07-03 12:00:51.695 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:00:51.698 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312005156849.jpg(String), 2018-07-03 12:00:51.66(Timestamp), 20(Long)
+2018-07-03 12:03:06.415 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:03:06.448 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:03:06.478 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:03:06.488 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312030636192.jpg
+2018-07-03 12:03:06.488 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312030636192.jpg
+2018-07-03 12:03:06.764 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:03:06.765 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312030636192.jpg(String), 2018-07-03 12:03:06.733(Timestamp), 20(Long)
+2018-07-03 12:10:07.828 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:10:07.862 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:10:07.955 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:10:07.966 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312100712751.jpg
+2018-07-03 12:10:07.966 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312100712751.jpg
+2018-07-03 12:10:08.243 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:10:08.245 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312100712751.jpg(String), 2018-07-03 12:10:08.218(Timestamp), 20(Long)
+2018-07-03 12:11:50.402 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:11:50.436 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:11:50.466 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:11:50.477 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312115063456.jpg
+2018-07-03 12:11:50.478 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312115063456.jpg
+2018-07-03 12:11:50.759 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:11:50.760 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312115063456.jpg(String), 2018-07-03 12:11:50.729(Timestamp), 20(Long)
+2018-07-03 12:13:43.095 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:13:43.127 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:13:43.221 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:13:43.232 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312134314377.jpg
+2018-07-03 12:13:43.232 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312134314377.jpg
+2018-07-03 12:13:43.503 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:13:43.504 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312134314377.jpg(String), 2018-07-03 12:13:43.475(Timestamp), 20(Long)
+2018-07-03 12:16:02.125 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:16:02.156 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:16:02.185 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:16:02.195 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312160271547.jpg
+2018-07-03 12:16:02.195 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312160271547.jpg
+2018-07-03 12:16:02.506 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:16:02.508 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312160271547.jpg(String), 2018-07-03 12:16:02.48(Timestamp), 20(Long)
+2018-07-03 12:20:08.893 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:20:08.921 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 20(Long)
+2018-07-03 12:20:08.951 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:20:08.961 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\20\2018070312200888531.jpg
+2018-07-03 12:20:08.961 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\20\2018070312200888531.jpg
+2018-07-03 12:20:09.236 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:20:09.237 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\20\2018070312200888531.jpg(String), 2018-07-03 12:20:09.207(Timestamp), 20(Long)
+2018-07-03 12:22:09.305 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:22:09.332 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:22:09.362 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:22:09.370 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312220999352.jpg
+2018-07-03 12:22:09.371 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312220999352.jpg
+2018-07-03 12:22:09.682 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:22:09.683 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312220999352.jpg(String), 2018-07-03 12:22:09.647(Timestamp), 2(Long)
+2018-07-03 12:27:05.562 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:27:05.594 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:27:05.623 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:27:05.633 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312270558392.jpg
+2018-07-03 12:27:05.633 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312270558392.jpg
+2018-07-03 12:27:05.900 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:27:05.901 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312270558392.jpg(String), 2018-07-03 12:27:05.872(Timestamp), 2(Long)
+2018-07-03 12:28:20.533 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:28:20.564 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:28:20.592 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:28:20.603 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312282028737.jpg
+2018-07-03 12:28:20.603 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312282028737.jpg
+2018-07-03 12:28:20.883 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:28:20.884 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312282028737.jpg(String), 2018-07-03 12:28:20.852(Timestamp), 2(Long)
+2018-07-03 12:30:34.076 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:30:34.110 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:30:34.140 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:30:34.150 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312303418546.jpg
+2018-07-03 12:30:34.151 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312303418546.jpg
+2018-07-03 12:30:34.430 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:30:34.431 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312303418546.jpg(String), 2018-07-03 12:30:34.401(Timestamp), 2(Long)
+2018-07-03 12:31:39.302 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:31:39.352 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:31:39.386 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:31:39.399 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312313932913.jpg
+2018-07-03 12:31:39.399 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312313932913.jpg
+2018-07-03 12:31:39.703 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:31:39.704 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312313932913.jpg(String), 2018-07-03 12:31:39.673(Timestamp), 2(Long)
+2018-07-03 12:32:35.561 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:32:35.601 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:32:35.630 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:32:35.640 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312323531308.jpg
+2018-07-03 12:32:35.640 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312323531308.jpg
+2018-07-03 12:32:36.004 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:32:36.005 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312323531308.jpg(String), 2018-07-03 12:32:35.971(Timestamp), 2(Long)
+2018-07-03 12:36:19.895 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:36:19.932 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:36:19.960 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:36:19.970 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312361917975.jpg
+2018-07-03 12:36:19.971 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312361917975.jpg
+2018-07-03 12:36:20.235 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:36:20.236 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312361917975.jpg(String), 2018-07-03 12:36:20.208(Timestamp), 2(Long)
+2018-07-03 12:37:18.867 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:37:18.900 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:37:18.928 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 12:37:18.939 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\2\2018070312371844186.jpg
+2018-07-03 12:37:18.940 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\2\2018070312371844186.jpg
+2018-07-03 12:37:19.210 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_img=?, last_edit_time=? WHERE shop_id=? 
+2018-07-03 12:37:19.211 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: CoCo after test(String), upload\item\shop\2\2018070312371844186.jpg(String), 2018-07-03 12:37:19.182(Timestamp), 2(Long)
+2018-07-03 12:37:19.291 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-03 12:37:19.291 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2018-07-03 12:37:19.291 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 2(Long)
+2018-07-03 12:37:19.294 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2018-07-03 22:11:21.640 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:11:21.688 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2018-07-03 22:11:21.724 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2018-07-03 22:12:50.311 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:12:50.346 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2018-07-03 22:12:50.379 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2018-07-03 22:12:50.388 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:12:50.389 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2018-07-03 22:12:50.391 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-03 22:15:58.453 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:15:58.498 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2018-07-03 22:15:58.539 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2018-07-03 22:15:58.549 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:15:58.549 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2018-07-03 22:15:58.551 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-03 22:15:58.553 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id = ? and s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:15:58.553 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Integer), 1(Long)
+2018-07-03 22:15:58.555 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-03 22:29:41.540 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:29:41.585 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Long), 0(Integer), 2(Integer)
+2018-07-03 22:29:41.616 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 0
+2018-07-03 22:29:41.626 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:29:41.626 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
+2018-07-03 22:29:41.629 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-03 22:29:58.323 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:29:58.354 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 2(Integer)
+2018-07-03 22:29:58.387 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 2
+2018-07-03 22:29:58.396 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:29:58.397 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2018-07-03 22:29:58.399 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-03 22:30:16.121 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-03 22:30:16.158 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 10(Integer), 2(Integer)
+2018-07-03 22:30:16.192 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2018-07-03 22:30:16.203 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-03 22:30:16.204 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2018-07-03 22:30:16.205 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

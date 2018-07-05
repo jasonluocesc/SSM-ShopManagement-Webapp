@@ -1,60 +1,19 @@
-2018-07-02 14:10:23.644 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 14:10:23.703 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-02 14:10:23.144(Timestamp), null, 1(Integer), 审核中(String)
-2018-07-02 14:10:23.721 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 14:18:42.189 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_addr=? where shop_id=? 
-2018-07-02 14:18:42.226 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试描述(String), 测试地址(String), 1(Long)
-2018-07-02 14:18:42.254 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 14:19:18.311 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_addr=?, last_edit_time=? where shop_id=? 
-2018-07-02 14:19:18.362 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试描述(String), 测试地址(String), 2018-07-02 14:19:17.617(Timestamp), 1(Long)
-2018-07-02 14:19:18.438 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 16:01:10.986 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 16:01:11.028 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺2(String), test2(String), test2(String), test2(String), null, null, 2018-07-02 16:01:10.965(Timestamp), 2018-07-02 16:01:10.965(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 16:01:11.034 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 16:01:11.060 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : \upload\item\shop2\2018070216011135142.jpg
-2018-07-02 16:01:11.061 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop2\2018070216011135142.jpg
-2018-07-02 16:01:11.133 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 16:01:11.134 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test2(String), test2(String), test2(String), \upload\item\shop2\2018070216011135142.jpg(String), 2018-07-02 16:01:10.965(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 2(Long)
-2018-07-02 16:01:11.141 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 16:06:35.897 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 16:06:35.935 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺2(String), test2(String), test2(String), test2(String), null, null, 2018-07-02 16:06:35.879(Timestamp), 2018-07-02 16:06:35.879(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 16:06:35.939 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 16:06:35.960 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : \upload\item\shop\3\2018070216063585814.jpg
-2018-07-02 16:06:35.960 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\3\2018070216063585814.jpg
-2018-07-02 16:06:36.023 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 16:06:36.023 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test2(String), test2(String), test2(String), \upload\item\shop\3\2018070216063585814.jpg(String), 2018-07-02 16:06:35.879(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 3(Long)
-2018-07-02 16:06:36.027 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 16:08:32.889 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 16:08:32.926 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺2(String), test2(String), test2(String), test2(String), null, null, 2018-07-02 16:08:32.862(Timestamp), 2018-07-02 16:08:32.862(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 16:08:32.929 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 16:08:32.949 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\4\2018070216083261367.jpg
-2018-07-02 16:08:32.950 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\4\2018070216083261367.jpg
-2018-07-02 16:08:33.200 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 16:08:33.201 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test2(String), test2(String), test2(String), upload\item\shop\4\2018070216083261367.jpg(String), 2018-07-02 16:08:32.862(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 4(Long)
-2018-07-02 16:08:33.203 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 16:09:17.213 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 16:09:17.258 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺2(String), test2(String), test2(String), test2(String), null, null, 2018-07-02 16:09:17.182(Timestamp), 2018-07-02 16:09:17.182(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 16:09:17.262 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 16:09:17.281 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\5\2018070216091731815.jpg
-2018-07-02 16:09:17.281 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\5\2018070216091731815.jpg
-2018-07-02 16:09:17.563 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 16:09:17.564 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test2(String), test2(String), test2(String), upload\item\shop\5\2018070216091731815.jpg(String), 2018-07-02 16:09:17.182(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 5(Long)
-2018-07-02 16:09:17.567 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 16:10:05.177 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 16:10:05.232 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺2(String), test2(String), test2(String), test2(String), null, null, 2018-07-02 16:10:05.141(Timestamp), 2018-07-02 16:10:05.141(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 16:10:05.235 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 16:10:05.258 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\6\2018070216100520746.jpg
-2018-07-02 16:10:05.258 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\6\2018070216100520746.jpg
-2018-07-02 16:10:05.584 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 16:10:05.585 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test2(String), test2(String), test2(String), upload\item\shop\6\2018070216100520746.jpg(String), 2018-07-02 16:10:05.141(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 6(Long)
-2018-07-02 16:10:05.588 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 17:13:26.056 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-02 17:13:26.113 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺4(String), test4(String), test4(String), test4(String), null, null, 2018-07-02 17:13:26.029(Timestamp), 2018-07-02 17:13:26.029(Timestamp), 0(Integer), 审核中(String)
-2018-07-02 17:13:26.118 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-02 17:13:26.145 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\7\2018070217132699231.jpg
-2018-07-02 17:13:26.146 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\7\2018070217132699231.jpg
-2018-07-02 17:13:26.576 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-02 17:13:26.578 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺4(String), test4(String), test4(String), test4(String), upload\item\shop\7\2018070217132699231.jpg(String), 2018-07-02 17:13:26.029(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 7(Long)
-2018-07-02 17:13:26.583 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-02 21:06:38.737 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
-2018-07-02 21:06:38.776 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-07-02 21:06:38.814 [main] DEBUG c.wenbin.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2018-07-05 10:40:35.996 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-07-05 10:40:36.093 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==> Parameters: Batch test1(String), 1(Integer), 2018-07-05 10:40:35.26(Timestamp), 1(Long), Batch test2(String), 2(Integer), 2018-07-05 10:40:35.26(Timestamp), 2(Long)
+2018-07-05 10:40:36.226 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - <==    Updates: 2
+2018-07-05 11:36:34.560 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-07-05 11:36:34.619 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==> Parameters: Batch test1(String), 1(Integer), 2018-07-05 11:36:34.108(Timestamp), 1(Long), Batch test2(String), 2(Integer), 2018-07-05 11:36:34.108(Timestamp), 2(Long)
+2018-07-05 11:36:34.707 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - <==    Updates: 2
+2018-07-05 11:36:38.610 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-07-05 11:36:38.652 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - ==> Parameters: Batch test1(String), 1(Integer), 2018-07-05 11:36:38.024(Timestamp), 1(Long), Batch test2(String), 2(Integer), 2018-07-05 11:36:38.024(Timestamp), 2(Long)
+2018-07-05 11:36:38.664 [main] DEBUG c.w.o.d.P.batchInsertProductCategory - <==    Updates: 2
+2018-07-05 12:52:25.186 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-07-05 12:52:25.234 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
+2018-07-05 12:52:25.267 [main] DEBUG c.w.o.d.P.queryProductCategoryList - <==      Total: 10
+2018-07-05 12:52:25.279 [main] DEBUG c.w.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id=? AND shop_id=? 
+2018-07-05 12:52:54.442 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-07-05 12:52:54.474 [main] DEBUG c.w.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
+2018-07-05 12:52:54.513 [main] DEBUG c.w.o.d.P.queryProductCategoryList - <==      Total: 10
+2018-07-05 12:52:54.523 [main] DEBUG c.w.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id=? AND shop_id=? 
+2018-07-05 12:52:54.524 [main] DEBUG c.w.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 38(Long), 1(Long)
+2018-07-05 12:52:54.570 [main] DEBUG c.w.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1

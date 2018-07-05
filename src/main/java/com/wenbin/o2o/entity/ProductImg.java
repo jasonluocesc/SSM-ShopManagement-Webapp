@@ -16,8 +16,8 @@ public class ProductImg {
     private String imgDesc;
     // 权重，越大越排前显示
     private Integer priority;
-    // 创建时间
+
     private Date createTime;
-    // 标明是属于哪个商品的图片
+
     private Long productId;
 }
