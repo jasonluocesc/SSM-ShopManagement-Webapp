@@ -1,6 +1,7 @@
 package com.wenbin.o2o.service.impl;
 
 import com.wenbin.o2o.dao.ShopDao;
+import com.wenbin.o2o.dto.ImageHolder;
 import com.wenbin.o2o.dto.ShopExecution;
 import com.wenbin.o2o.entity.Shop;
 import com.wenbin.o2o.enums.ShopStateEnum;
@@ -32,19 +33,19 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String filename) throws ShopOperationException {
+    public ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException {
 
         //judge if modify image
         if(shop==null||shop.getShopId()==null){
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
         }else{
             try{
-                if(shopImgInputStream!=null && filename!=null && !"".equals(filename)){
+                if(thumbnail.getImage()!=null && thumbnail.getImageName()!=null && !"".equals(thumbnail.getImageName())){
                     Shop tempShop = shopDao.queryByShopId(shop.getShopId());
                     if(tempShop.getShopImg()!=null){
                         ImageUtil.deleteFileOrPath(tempShop.getShopImg());
                     }
-                    addShopImg(shop,shopImgInputStream,filename);
+                    addShopImg(shop,thumbnail);
                 }
                 shop.setLastEditTime(new Date());
                 int effectNum = shopDao.updateShop(shop);
@@ -63,7 +64,7 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     @Transactional
-    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) {
+    public ShopExecution addShop(Shop shop, ImageHolder thumbnail) {
 
         //null value judge
         if(shop==null){
@@ -78,9 +79,9 @@ public class ShopServiceImpl implements ShopService {
             if(effectedNum<=0){
                 throw new ShopOperationException("店铺创建失败");
             }else {
-                if(shopImgInputStream !=null){
+                if(thumbnail.getImage() !=null){
                     try {
-                        addShopImg(shop, shopImgInputStream,fileName);
+                        addShopImg(shop, thumbnail);
                     }catch (Exception e){
                         throw new ShopOperationException("addShopImg error: "+e.getMessage());
                     }
@@ -115,10 +116,10 @@ public class ShopServiceImpl implements ShopService {
         return se;
     }
 
-    private void addShopImg(Shop shop, InputStream shopImgInputStream,String fileName) {
+    private void addShopImg(Shop shop, ImageHolder thumbnail) {
         // get shop image relative path
         String dest = PathUtil.getShopImagePath(shop.getShopId());
-        String shopImgAddr = ImageUtil.generateThumbnail(shopImgInputStream,fileName,dest);
+        String shopImgAddr = ImageUtil.generateThumbnail(thumbnail,dest);
         shop.setShopImg(shopImgAddr);
     }
 }

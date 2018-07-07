@@ -1,6 +1,7 @@
-package com.wenbin.o2o.service.impl;
+package com.wenbin.o2o.service;
 
 import com.wenbin.o2o.BaseTest;
+import com.wenbin.o2o.dto.ImageHolder;
 import com.wenbin.o2o.dto.ShopExecution;
 import com.wenbin.o2o.entity.Area;
 import com.wenbin.o2o.entity.PersonInfo;
@@ -60,7 +61,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setAdvice("审核中");
         File shopImg=new File("G:\\Wenbin.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
+        ImageHolder imageHolder = new ImageHolder(shopImg.getName(),is);
+        ShopExecution se = shopService.addShop(shop,imageHolder);
         assertEquals(ShopStateEnum.CHECK.getState(),se.getState());
     }
 
@@ -71,7 +73,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setShopName("CoCo after test");
         File shopImg = new File("G:/Wenbin.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution = shopService.modifyShop(shop,is,shopImg.getName());
+        ImageHolder imageHolder = new ImageHolder(shopImg.getName(),is);
+        ShopExecution shopExecution = shopService.modifyShop(shop,imageHolder);
         System.out.println("新图片地址为:"+shopExecution.getShop().getShopImg());
     }
 }

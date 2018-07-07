@@ -10,23 +10,23 @@ import java.util.List;
  */
 @Data
 public class Product {
-    // 主键ID
+
     private Long productId;
-    // 商品名
+
     private String productName;
-    // 商品简介
+
     private String productDesc;
-    // 简略图
+
     private String imgAddr;
-    // 原价
+
     private String normalPrice;
-    // 现价(推广价格)
+    // 推广价格
     private String promotionPrice;
-    // 权重，越大越排前显示
+
     private Integer priority;
-    // 创建时间
+
     private Date createTime;
-    // 最近一次的更新时间
+
     private Date lastEditTime;
     // 0.下架 1.在前端展示系统展示
     private Integer enableStatus;

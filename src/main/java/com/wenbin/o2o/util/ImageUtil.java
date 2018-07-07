@@ -1,5 +1,6 @@
 package com.wenbin.o2o.util;
 
+import com.wenbin.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.slf4j.Logger;
@@ -26,6 +27,26 @@ public class ImageUtil {
     private static final Random random = new Random();
     private static Logger logger = LoggerFactory.getLogger(ImageUtil.class);
 
+    public static String generateNormalImg(ImageHolder thumbnail,String targetAddr){
+        String realFileName = getRandomFileName();
+        String extension = getFileExtension(thumbnail.getImageName());
+        makeDirPath(targetAddr);
+        String relativeAddr = targetAddr + realFileName + extension;
+        logger.debug("current relativeAddr is: "+relativeAddr);
+        File dest = new File(PathUtil.getImgBasePath()+relativeAddr);
+        logger.debug("current completeAddr is: "+PathUtil.getImgBasePath()+relativeAddr);
+
+        try{
+            Thumbnails.of(thumbnail.getImage()).size(337,640)
+                    .watermark(Positions.BOTTOM_RIGHT,ImageIO.read(new File(basePath+"/watermark.jpg")),0.25f)
+                    .outputQuality(0.9f).toFile(dest);
+        } catch (IOException e) {
+            logger.error(e.toString());
+            throw new RuntimeException("创建缩略图失败："+e.toString());
+        }
+        return relativeAddr;
+    }
+
     public static File transferCommonsMultipartFileToFile(CommonsMultipartFile cFile){
         File newFile = new File(cFile.getOriginalFilename());
         try {
@@ -37,9 +58,9 @@ public class ImageUtil {
         return newFile;
     }
 
-    public static String generateThumbnail(InputStream thumbnailInputStream, String fileName, String targetAddr){
+    public static String generateThumbnail(ImageHolder thumbnail, String targetAddr){
         String realFileName = getRandomFileName();
-        String extension = getFileExtension(fileName);
+        String extension = getFileExtension(thumbnail.getImageName());
         makeDirPath(targetAddr);
         String relativeAddr = targetAddr + realFileName + extension;
 
@@ -49,7 +70,7 @@ public class ImageUtil {
 
         logger.debug("current complete address is : "+PathUtil.getImgBasePath()+relativeAddr);
         try{
-            Thumbnails.of(thumbnailInputStream).size(200,200)
+            Thumbnails.of(thumbnail.getImage()).size(200,200)
                     .watermark(Positions.BOTTOM_RIGHT,ImageIO.read(new File(basePath +"/watermark.jpg")),0.25f)
                     .outputQuality(0.8f).toFile(dest);
         }catch (IOException e){

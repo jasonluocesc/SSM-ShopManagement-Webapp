@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface AreaDao {
 
-    // list all the existing areas
+    // 列出所有区域
     List<Area> queryArea();
 }

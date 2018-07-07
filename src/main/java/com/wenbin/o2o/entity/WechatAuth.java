@@ -9,6 +9,7 @@ import java.util.Date;
  */
 @Data
 public class WechatAuth {
+
     private Long wechatAuthId;
 
     private String openId;
