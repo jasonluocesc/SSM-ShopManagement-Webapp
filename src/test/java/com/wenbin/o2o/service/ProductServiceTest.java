@@ -37,10 +37,11 @@ public class ProductServiceTest extends BaseTest {
         ProductCategory pc = new ProductCategory();
         pc.setProductCategoryId(2L);
         product.setShop(shop);
+        product.setProductId(40L);
         product.setProductCategory(pc);
-        product.setProductName("测试商品1");
-        product.setProductDesc("测试商品1");
-        product.setPriority(20);
+        product.setProductName("正式商品1");
+        product.setProductDesc("正式商品1");
+        product.setPriority(25);
         product.setCreateTime(new Date());
         product.setEnableStatus(ProductStateEnum.SUCCESS.getState());
         // 创建缩略图文件流
@@ -56,7 +57,7 @@ public class ProductServiceTest extends BaseTest {
         productImgList.add(new ImageHolder(productImg1.getName(), is1));
         productImgList.add(new ImageHolder(productImg2.getName(), is2));
         // 添加商品并验证
-        ProductExecution pe = productService.addProduct(product, thumbnail, productImgList);
+        ProductExecution pe = productService.modifyProduct(product, thumbnail, productImgList);
         assertEquals(ProductStateEnum.SUCCESS.getState(), pe.getState());
     }
 }

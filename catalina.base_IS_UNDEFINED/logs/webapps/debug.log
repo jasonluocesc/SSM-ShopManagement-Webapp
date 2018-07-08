@@ -1,34 +1,27 @@
-2018-07-06 10:20:27.636 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-07-06 10:20:27.683 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), test pic 1(String), 1(Integer), 2018-07-06 10:20:27.211(Timestamp), 1(Long), 图片2(String), test pic 2(String), 2(Integer), 2018-07-06 10:20:27.211(Timestamp), 1(Long)
-2018-07-06 10:25:39.751 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-07-06 10:25:39.800 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), test pic 1(String), 1(Integer), 2018-07-06 10:25:39.364(Timestamp), 1(Long), 图片2(String), test pic 2(String), 2(Integer), 2018-07-06 10:25:39.364(Timestamp), 1(Long)
-2018-07-06 10:25:39.812 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-07-06 10:42:53.629 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
-2018-07-06 10:42:53.676 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==> Parameters: Test111(String), test(String), test1(String), null, null, 1(Integer), 2018-07-06 10:42:53.249(Timestamp), 2018-07-06 10:42:53.249(Timestamp), 1(Integer), 1(Long), 10(Long)
-2018-07-06 10:43:28.926 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
-2018-07-06 10:43:28.967 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==> Parameters: Test111(String), test(String), test1(String), null, null, 1(Integer), 2018-07-06 10:43:28.536(Timestamp), 2018-07-06 10:43:28.536(Timestamp), 1(Integer), 2(Long), 10(Long)
-2018-07-06 10:43:29.043 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-07-06 15:50:53.544 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
-2018-07-06 15:50:53.669 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 1(Integer), 1(Long), 测试店铺4(String), test4(String), test4(String), test4(String), null, null, 2018-07-06 15:50:53.52(Timestamp), 2018-07-06 15:50:53.52(Timestamp), 0(Integer), 审核中(String)
-2018-07-06 15:50:53.747 [main] DEBUG com.wenbin.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-06 15:50:53.768 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\21\2018070615505352919.jpg
-2018-07-06 15:50:53.769 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\21\2018070615505352919.jpg
-2018-07-06 15:50:54.248 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? WHERE shop_id=? 
-2018-07-06 15:50:54.248 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试店铺4(String), test4(String), test4(String), test4(String), upload\item\shop\21\2018070615505352919.jpg(String), 2018-07-06 15:50:53.52(Timestamp), 0(Integer), 审核中(String), 1(Integer), 1(Long), 21(Long)
-2018-07-06 15:50:54.254 [main] DEBUG com.wenbin.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-07-06 16:03:34.684 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\1\2018070616033480498.jpg
-2018-07-06 16:03:34.770 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\1\2018070616033480498.jpg
-2018-07-06 16:03:35.053 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
-2018-07-06 16:03:35.087 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), 测试商品1(String), upload\item\shop\1\2018070616033480498.jpg(String), null, null, 20(Integer), 2018-07-06 16:03:34.681(Timestamp), 2018-07-06 16:03:34.681(Timestamp), 1(Integer), 1(Long), 1(Long)
-2018-07-06 16:07:20.311 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\1\2018070616072036175.jpg
-2018-07-06 16:07:20.311 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\1\2018070616072036175.jpg
-2018-07-06 16:07:20.571 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
-2018-07-06 16:07:20.606 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), 测试商品1(String), upload\item\shop\1\2018070616072036175.jpg(String), null, null, 20(Integer), 2018-07-06 16:07:20.308(Timestamp), 2018-07-06 16:07:20.308(Timestamp), 1(Integer), 2(Long), 1(Long)
-2018-07-06 16:07:20.609 [main] DEBUG com.wenbin.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-07-06 16:07:20.661 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070616072030540.jpg
-2018-07-06 16:07:20.661 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070616072030540.jpg
-2018-07-06 16:07:20.736 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070616072069556.jpg
-2018-07-06 16:07:20.736 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070616072069556.jpg
-2018-07-06 16:07:20.967 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-07-06 16:07:20.968 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload\item\shop\1\2018070616072030540.jpg(String), null, null, 2018-07-06 16:07:20.735(Timestamp), 40(Long), upload\item\shop\1\2018070616072069556.jpg(String), null, null, 2018-07-06 16:07:20.937(Timestamp), 40(Long)
-2018-07-06 16:07:20.971 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-07-08 10:29:23.799 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-07-08 10:29:23.838 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
+2018-07-08 10:29:23.917 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2018-07-08 10:33:49.730 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
+2018-07-08 10:33:49.772 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第一个产品(String), 2(Long), 1(Long), 1(Long)
+2018-07-08 10:33:49.816 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-07-08 10:55:51.009 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-07-08 10:55:51.040 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - ==> Parameters: 40(Long)
+2018-07-08 10:55:51.072 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2018-07-08 10:55:51.208 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\1\2018070810555169944.jpg
+2018-07-08 10:55:51.208 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\1\2018070810555169944.jpg
+2018-07-08 10:55:51.630 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2018-07-08 10:55:51.631 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 40(Long)
+2018-07-08 10:55:51.634 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2018-07-08 10:55:51.637 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-07-08 10:55:51.638 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 40(Long)
+2018-07-08 10:55:51.697 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2018-07-08 10:55:51.697 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070810555183748.jpg
+2018-07-08 10:55:51.698 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070810555183748.jpg
+2018-07-08 10:55:51.779 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070810555139993.jpg
+2018-07-08 10:55:51.779 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070810555139993.jpg
+2018-07-08 10:55:51.947 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-07-08 10:55:51.949 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload\item\shop\1\2018070810555183748.jpg(String), null, null, 2018-07-08 10:55:51.778(Timestamp), 40(Long), upload\item\shop\1\2018070810555139993.jpg(String), null, null, 2018-07-08 10:55:51.912(Timestamp), 40(Long)
+2018-07-08 10:55:51.955 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-07-08 10:55:51.967 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_desc=?, priority=?, last_edit_time=?, enable_status=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
+2018-07-08 10:55:51.968 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式商品1(String), 正式商品1(String), 25(Integer), 2018-07-08 10:55:50.631(Timestamp), 1(Integer), 2(Long), 40(Long), 1(Long)
+2018-07-08 10:55:51.976 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - <==    Updates: 1

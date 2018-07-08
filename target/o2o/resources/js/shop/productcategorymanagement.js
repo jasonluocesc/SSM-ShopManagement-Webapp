@@ -85,7 +85,7 @@ $(function() {
                         productCategoryId : target.dataset.id
                     },
                     dataType : 'json',
-                    success : function(data) {
+                    success : function(data) {     // TODO 有bug 不能弹出删除成功窗口（但后台数据删除成功）传不来data
                         if (data.success) {
                             $.toast('删除成功！');
                             getList();

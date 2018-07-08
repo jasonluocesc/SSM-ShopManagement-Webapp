@@ -69,4 +69,12 @@ public class ProductImgDaoTest extends BaseTest {
 
         int effectNum = productDao.insertProduct(product1);
     }
+
+    @Test
+    public void testDeleteProductImgByProductId() throws Exception{
+        long productId = 1;
+        int effectNum = productImgDao.deleteProductImgByProductId(productId);
+        assertEquals(2,effectNum);
+    }
+
 }
