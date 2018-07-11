@@ -7,6 +7,8 @@ import com.wenbin.o2o.entity.Shop;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -29,5 +31,26 @@ public class ProductDaoTest extends BaseTest {
         product.setProductCategory(pc);
         int effectNum = productDao.updateProduct(product);
         assertEquals(1,effectNum);
+    }
+    @Test
+    public void testQueryProductList() throws Exception{
+        Product productCondition = new Product();
+        List<Product> productList = productDao.queryProductList(productCondition,0,3);
+        assertEquals(3,productList.size());
+
+        int count = productDao.queryProductCount(productCondition);
+        assertEquals(4,count);
+
+        productCondition.setProductName("摩卡咖啡");
+        productList=productDao.queryProductList(productCondition,0,3);
+        assertEquals(1,productList.size());
+        count = productDao.queryProductCount((productCondition));
+        assertEquals(1,count);
+    }
+
+    @Test
+    public void testUpdateProductCategoryToNull()throws Exception{
+        int effectNum = productDao.updateProductCategoryToNull(2L);
+        System.out.println(effectNum);
     }
 }

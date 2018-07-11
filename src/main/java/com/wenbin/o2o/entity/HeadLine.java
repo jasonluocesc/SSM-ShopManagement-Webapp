@@ -9,7 +9,8 @@ import java.util.Date;
  */
 @Data
 public class HeadLine {
-    private long lineId;
+
+    private Long lineId;
 
     private String lineName;
 
