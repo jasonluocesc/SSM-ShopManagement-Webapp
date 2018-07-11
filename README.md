@@ -3,9 +3,9 @@
 ## TODO List
 
 
-- [ ] Modify Welcome Page
+- [x] Modify Welcome Page
 - [ ] Deploy to Ali Cloud
-- [ ]  Add Redis data cache
+- [ ] Add Redis data cache
 
 
 

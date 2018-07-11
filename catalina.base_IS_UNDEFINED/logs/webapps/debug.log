@@ -1,45 +1,18 @@
-2018-07-08 10:29:23.799 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-07-08 10:29:23.838 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
-2018-07-08 10:29:23.917 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-07-08 10:33:49.730 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2018-07-08 10:33:49.772 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第一个产品(String), 2(Long), 1(Long), 1(Long)
-2018-07-08 10:33:49.816 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2018-07-08 10:55:51.009 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-07-08 10:55:51.040 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - ==> Parameters: 40(Long)
-2018-07-08 10:55:51.072 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-07-08 10:55:51.208 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relative address is : upload\item\shop\1\2018070810555169944.jpg
-2018-07-08 10:55:51.208 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current complete address is : E:\Projects\o2oimage\upload\item\shop\1\2018070810555169944.jpg
-2018-07-08 10:55:51.630 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
-2018-07-08 10:55:51.631 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 40(Long)
-2018-07-08 10:55:51.634 [main] DEBUG c.wenbin.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
-2018-07-08 10:55:51.637 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-07-08 10:55:51.638 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 40(Long)
-2018-07-08 10:55:51.697 [main] DEBUG c.w.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-07-08 10:55:51.697 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070810555183748.jpg
-2018-07-08 10:55:51.698 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070810555183748.jpg
-2018-07-08 10:55:51.779 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current relativeAddr is: upload\item\shop\1\2018070810555139993.jpg
-2018-07-08 10:55:51.779 [main] DEBUG com.wenbin.o2o.util.ImageUtil - current completeAddr is: E:\Projects\o2oimage\upload\item\shop\1\2018070810555139993.jpg
-2018-07-08 10:55:51.947 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
-2018-07-08 10:55:51.949 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload\item\shop\1\2018070810555183748.jpg(String), null, null, 2018-07-08 10:55:51.778(Timestamp), 40(Long), upload\item\shop\1\2018070810555139993.jpg(String), null, null, 2018-07-08 10:55:51.912(Timestamp), 40(Long)
-2018-07-08 10:55:51.955 [main] DEBUG c.w.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-07-08 10:55:51.967 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_desc=?, priority=?, last_edit_time=?, enable_status=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2018-07-08 10:55:51.968 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式商品1(String), 正式商品1(String), 25(Integer), 2018-07-08 10:55:50.631(Timestamp), 1(Integer), 2(Long), 40(Long), 1(Long)
-2018-07-08 10:55:51.976 [main] DEBUG com.wenbin.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2018-07-08 17:36:44.891 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-07-08 17:36:44.925 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-07-08 17:36:44.957 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2018-07-08 17:36:44.966 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2018-07-08 17:36:44.966 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-07-08 17:36:44.968 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-07-08 17:37:08.484 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-07-08 17:37:08.519 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-07-08 17:37:08.549 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2018-07-08 17:37:08.560 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2018-07-08 17:37:08.560 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-07-08 17:37:08.561 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-07-08 17:37:08.565 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%摩卡咖啡%' ORDER BY priority DESC LIMIT ?,?; 
-2018-07-08 17:37:08.566 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-07-08 17:37:08.569 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductList - <==      Total: 1
-2018-07-08 17:37:08.569 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%摩卡咖啡%' 
-2018-07-08 17:37:08.570 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-07-08 17:37:08.571 [main] DEBUG com.wenbin.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-07-11 09:47:32.028 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-11 09:47:32.089 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 5(Integer)
+2018-07-11 09:47:32.135 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2018-07-11 09:47:32.144 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-11 09:47:32.145 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2018-07-11 09:47:32.149 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-11 09:48:18.967 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-11 09:48:19.000 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 5(Integer)
+2018-07-11 09:48:19.029 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2018-07-11 09:48:19.045 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-11 09:48:19.045 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2018-07-11 09:48:19.047 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-11 09:51:26.062 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2018-07-11 09:51:26.094 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 16(Long), 0(Integer), 5(Integer)
+2018-07-11 09:51:26.124 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2018-07-11 09:51:26.132 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-07-11 09:51:26.133 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 16(Long)
+2018-07-11 09:51:26.135 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

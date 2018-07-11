@@ -35,7 +35,8 @@ public class MainPageController {
         List<ShopCategory> shopCategoryList = new ArrayList<ShopCategory>();
         try {
             // 获取一级店铺类别列表(即parentId为空的ShopCategory)
-            shopCategoryList = shopCategoryService.getShopCategoryList(null);
+            shopCategoryList = shopCategoryService
+                    .getShopCategoryList(null);
             modelMap.put("shopCategoryList", shopCategoryList);
         } catch (Exception e) {
             modelMap.put("success", false);
