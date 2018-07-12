@@ -24,6 +24,7 @@ $(function() {
      *
      * @returns
      */
+    
     function getSearchDivData() {
         // 如果传入了parentId，则取出此一级类别下面的所有二级类别
         var url = searchDivUrl + '?' + 'parentId=' + parentId;

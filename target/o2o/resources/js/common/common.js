@@ -1,15 +1,3 @@
-function changeVerifyCode(img) {
-    img.src="../Kaptcha?"+Math.floor(Math.random()*100);
-}
-
-function getQueryString(name) {
-    var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r!=null) {
-        return decodeURIComponent(r[2]);
-    }
-    return '';
-}
 Date.prototype.Format = function(fmt) {
     var o = {
         "M+" : this.getMonth() + 1, // 月份
@@ -29,4 +17,16 @@ Date.prototype.Format = function(fmt) {
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k])
                 : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
+}
+function changeVerifyCode(img) {
+    img.src="../Kaptcha?"+Math.floor(Math.random()*100);
+}
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null) {
+        return decodeURIComponent(r[2]);
+    }
+    return '';
 }
