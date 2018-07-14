@@ -5,7 +5,7 @@
 
 - [x] Modify Welcome Page
 - [ ] Deploy to Ali Cloud
-- [ ] Add Redis data cache
+- [x] Add Redis data cache
 
 
 
