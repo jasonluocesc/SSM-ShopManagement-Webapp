@@ -1,4 +1,4 @@
-$(function() {
+$(function(){
     // 从URL里获取productId参数的值
     var productId = getQueryString('productId');
     // 通过productId获取商品信息的URL
