@@ -1,18 +1,56 @@
-2018-07-11 09:47:32.028 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
-2018-07-11 09:47:32.089 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 5(Integer)
-2018-07-11 09:47:32.135 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 5
-2018-07-11 09:47:32.144 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-07-11 09:47:32.145 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
-2018-07-11 09:47:32.149 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-07-11 09:48:18.967 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
-2018-07-11 09:48:19.000 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 5(Integer)
-2018-07-11 09:48:19.029 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 1
-2018-07-11 09:48:19.045 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-07-11 09:48:19.045 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
-2018-07-11 09:48:19.047 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-07-11 09:51:26.062 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
-2018-07-11 09:51:26.094 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - ==> Parameters: 16(Long), 0(Integer), 5(Integer)
-2018-07-11 09:51:26.124 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopList - <==      Total: 1
-2018-07-11 09:51:26.132 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-07-11 09:51:26.133 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 16(Long)
-2018-07-11 09:51:26.135 [main] DEBUG com.wenbin.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-07-19 15:55:22.380 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 15:55:22.443 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2018-07-19 15:55:22.064(Timestamp), null
+2018-07-19 15:55:22.476 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2018-07-19 15:55:22.508 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 15:55:22.509 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 15:55:22.521 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 15:55:43.515 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 15:55:43.562 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2018-07-19 15:55:43.213(Timestamp), null
+2018-07-19 15:55:43.758 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 15:55:43.759 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 15:55:43.783 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 15:56:55.399 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 15:56:55.444 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2018-07-19 15:56:55.096(Timestamp), null
+2018-07-19 15:56:55.533 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2018-07-19 15:56:55.588 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 15:56:55.588 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 15:56:55.621 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 16:02:31.937 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 16:02:31.992 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2018-07-19 16:02:31.644(Timestamp), null
+2018-07-19 16:02:32.064 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2018-07-19 16:02:32.085 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.username = ? AND l.password = ? 
+2018-07-19 16:02:32.086 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==> Parameters: testusername(String), testpassword(String)
+2018-07-19 16:02:32.099 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - <==      Total: 1
+2018-07-19 16:02:32.111 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 16:02:32.111 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 16:02:32.114 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 16:06:36.678 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 16:06:36.730 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2018-07-19 16:06:36.405(Timestamp), null
+2018-07-19 16:06:36.860 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.username = ? AND l.password = ? 
+2018-07-19 16:06:36.860 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==> Parameters: testusername(String), testpassword(String)
+2018-07-19 16:06:36.880 [main] DEBUG c.w.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - <==      Total: 1
+2018-07-19 16:06:36.882 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 16:06:36.882 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 16:06:36.883 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 16:06:36.921 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2018-07-19 16:06:36.923 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: newpassword(String), 2018-07-19 16:06:36.884(Timestamp), 1(Long), testusername(String), testpassword(String)
+2018-07-19 16:06:36.933 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2018-07-19 16:06:36.934 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2018-07-19 16:06:36.934 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2018-07-19 16:06:36.936 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2018-07-19 16:36:55.349 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2018-07-19 16:36:55.377 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6559sq606y6l92e9ss5qsqb5q92e566b(String), 2018-07-19 16:36:55.293(Timestamp), 1(Long), testusername(String), s06l5bl5s05602ly2syls6556q56sb6e(String)
+2018-07-19 16:36:55.384 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2018-07-19 16:37:16.156 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2018-07-19 16:37:16.184 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6559sq606y6l92e9ss5qsqb5q92e566b(String), 2018-07-19 16:37:16.107(Timestamp), 1(Long), testusername(String), 9sqs00b02bs0e5ss22sq5syql96ys0lb(String)
+2018-07-19 16:37:16.187 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2018-07-19 16:39:16.167 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2018-07-19 16:39:16.197 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6559sq606y6l92e9ss5qsqb5q92e566b(String), 2018-07-19 16:39:16.113(Timestamp), 1(Long), testusername(String), 9sqs00b02bs0e5ss22sq5syql96ys0lb(String)
+2018-07-19 16:39:16.199 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2018-07-19 20:43:34.431 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 20:43:34.480 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 2(Long), 2018-07-19 20:43:34.118(Timestamp), null
+2018-07-19 20:45:19.201 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 20:45:19.250 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: username1(String), testpassword(String), 2(Long), 2018-07-19 20:45:18.931(Timestamp), null
+2018-07-19 20:45:57.585 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2018-07-19 20:45:57.624 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: username1(String), testpassword(String), 2(Long), 2018-07-19 20:45:57.316(Timestamp), null
+2018-07-19 20:45:57.704 [main] DEBUG com.wenbin.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1

@@ -48,8 +48,7 @@
         <constructor-arg ref="jedisUtil"></constructor-arg>
     </bean>
 
-    <bean id="jedisHash" class="com.wenbin.o2o.cache.JedisUtil$Hash"
-          scope="singleton">
+    <bean id="jedisHash" class="com.wenbin.o2o.cache.JedisUtil$Hash" scope="singleton">
         <constructor-arg ref="jedisUtil"></constructor-arg>
     </bean>
 </beans>
