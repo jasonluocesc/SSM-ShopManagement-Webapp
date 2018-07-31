@@ -13,7 +13,7 @@ public class PathUtil {
         if(os.toLowerCase().startsWith("win")){
             basePath="E:/Projects/o2oimage/";
         }else{
-            basePath="/home/album/image/";
+            basePath="/Users/baidu/work/image/";
         }
         basePath = basePath.replace("/",seperator);
         return basePath;

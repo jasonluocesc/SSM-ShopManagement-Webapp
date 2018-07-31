@@ -14,6 +14,7 @@ public interface LocalAuthService {
 
     LocalAuth getLocalAuthByUserId(long userId);
 
+    LocalAuthExecution bindLocalAuth(LocalAuth localAuth) throws LocalAuthOperationException;
 
     LocalAuthExecution modifyLocalAuth(Long userId, String username, String password, String newPassword) throws LocalAuthOperationException;
 }

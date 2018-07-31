@@ -22,7 +22,7 @@ import java.util.Random;
 public class ImageUtil {
 
     private static String separator = System.getProperty("file.separator");
-    private static String basePath ="E:/Projects/o2oimage".replace("/",separator);
+    private static String basePath =Thread.currentThread().getContextClassLoader().getResource("").getPath();
     private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private static final Random random = new Random();
     private static Logger logger = LoggerFactory.getLogger(ImageUtil.class);

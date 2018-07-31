@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/local")
 public class LocalController {
 
+    @RequestMapping(value = "/accountbind", method = RequestMethod.GET)
+    private String accountbind() {
+        return "local/accountbind";
+    }
+
     @RequestMapping(value = "/changepsw", method = RequestMethod.GET)
     private String changepsw() {
         return "local/changepsw";
@@ -20,5 +25,7 @@ public class LocalController {
     private String login() {
         return "local/login";
     }
+
+
 }
 

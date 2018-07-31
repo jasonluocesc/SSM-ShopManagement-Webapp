@@ -1,5 +1,7 @@
 package com.wenbin.o2o.exceptions;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author Wenbin Luo @ Aalto University
  */

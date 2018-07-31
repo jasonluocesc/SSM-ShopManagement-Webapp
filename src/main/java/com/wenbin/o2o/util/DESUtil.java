@@ -5,6 +5,7 @@ import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
+import java.lang.reflect.Constructor;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -75,7 +76,7 @@ public class DESUtil {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(getEncryptString("wenbin"));
+    public static void main(String[] args) throws ClassNotFoundException {
+        //System.out.println(getEncryptString("Mysql9364!"));
     }
 }

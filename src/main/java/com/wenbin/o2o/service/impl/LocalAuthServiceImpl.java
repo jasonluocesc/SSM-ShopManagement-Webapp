@@ -34,6 +34,38 @@ public class LocalAuthServiceImpl implements LocalAuthService {
 
     @Override
     @Transactional
+    public LocalAuthExecution bindLocalAuth(LocalAuth localAuth) throws LocalAuthOperationException {
+        // 空值判断，传入的localAuth 帐号密码，用户信息特别是userId不能为空，否则直接返回错误
+        if (localAuth == null || localAuth.getPassword() == null || localAuth.getUsername() == null
+                || localAuth.getPersonInfo() == null || localAuth.getPersonInfo().getUserId() == null) {
+            return new LocalAuthExecution(LocalAuthStateEnum.NULL_AUTH_INFO);
+        }
+        // 查询此用户是否已绑定过平台帐号
+        LocalAuth tempAuth = localAuthDao.queryLocalByUserId(localAuth.getPersonInfo().getUserId());
+        if (tempAuth != null) {
+            // 如果绑定过则直接退出，以保证平台帐号的唯一性
+            return new LocalAuthExecution(LocalAuthStateEnum.ONLY_ONE_ACCOUNT);
+        }
+        try {
+            // 如果之前没有绑定过平台帐号，则创建一个平台帐号与该用户绑定
+            localAuth.setCreateTime(new Date());
+            localAuth.setLastEditTime(new Date());
+            // 对密码进行MD5加密
+            localAuth.setPassword(MD5.getMd5(localAuth.getPassword()));
+            int effectedNum = localAuthDao.insertLocalAuth(localAuth);
+            // 判断创建是否成功
+            if (effectedNum <= 0) {
+                throw new LocalAuthOperationException("帐号绑定失败");
+            } else {
+                return new LocalAuthExecution(LocalAuthStateEnum.SUCCESS, localAuth);
+            }
+        } catch (Exception e) {
+            throw new LocalAuthOperationException("insertLocalAuth error: " + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional
     public LocalAuthExecution modifyLocalAuth(Long userId, String userName, String password, String newPassword)
             throws LocalAuthOperationException {
 

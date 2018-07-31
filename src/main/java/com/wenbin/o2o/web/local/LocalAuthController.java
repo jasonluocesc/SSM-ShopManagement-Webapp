@@ -27,6 +27,50 @@ public class LocalAuthController {
     @Autowired
     private LocalAuthService localAuthService;
 
+    @RequestMapping(value = "/bindlocalauth", method = RequestMethod.POST)
+    @ResponseBody
+    /**
+     * 将用户信息与平台帐号绑定
+     *
+     * @param request
+     * @return
+     */
+    private Map<String, Object> bindLocalAuth(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        // 验证码校验
+        if (!CodeUtil.checkVerifyCode(request)) {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "输入了错误的验证码");
+            return modelMap;
+        }
+        // 获取输入的帐号
+        String userName = HttpServletRequestUtil.getString(request, "userName");
+        // 获取输入的密码
+        String password = HttpServletRequestUtil.getString(request, "password");
+        // 从session中获取当前用户信息(用户一旦通过微信登录之后，便能获取到用户的信息)
+        PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
+        // 非空判断，要求帐号密码以及当前的用户session非空
+        if (userName != null && password != null && user != null && user.getUserId() != null) {
+            // 创建LocalAuth对象并赋值
+            LocalAuth localAuth = new LocalAuth();
+            localAuth.setUsername(userName);
+            localAuth.setPassword(password);
+            localAuth.setPersonInfo(user);
+            // 绑定帐号
+            LocalAuthExecution le = localAuthService.bindLocalAuth(localAuth);
+            if (le.getState() == LocalAuthStateEnum.SUCCESS.getState()) {
+                modelMap.put("success", true);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", le.getStateInfo());
+            }
+        } else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "用户名和密码均不能为空");
+        }
+        return modelMap;
+    }
+
     @RequestMapping(value = "/changelocalpwd", method = RequestMethod.POST)
     @ResponseBody
     private Map<String, Object> changeLocalPwd(HttpServletRequest request) {
