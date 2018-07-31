@@ -4,8 +4,9 @@
 
 
 - [x] Modify Welcome Page
-- [ ] Deploy to Ali Cloud
+- [x] Deploy to Ali Cloud
 - [x] Add Redis data cache
+- [ ] Polish
 
 
 
